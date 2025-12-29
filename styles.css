@@ -1,3 +1,14 @@
+
+/* ==========================================================
+   SITE SECTIONS
+   ----------------------------------------------------------
+   HERO
+   LIVE PERFORMANCE
+   VIDEOS
+   UPCOMING CONCERTS (table-based section, overrides near tables)
+   ========================================================== */
+
+
 :root {
     --bg: #f6f1e8;
     --bg2: #efe7da;
@@ -239,6 +250,9 @@ a:hover {
     transform: translateY(-4px) rotate(-45deg);
 }
 
+
+/* --------------------HERO------------------------ */
+
 .hero {
     padding: 54px 0 24px;
 }
@@ -325,10 +339,16 @@ a:hover {
     border-color: rgba(255, 255, 255, .55);
 }
 
-/* Live Performance */
+
+
+/* LIVE PERFORMANCE --------------------- */
+
+
 .live-performance {
     margin: 0;
 }
+
+
 
 .live-performance img {
     width: 100%;
@@ -344,6 +364,70 @@ a:hover {
 
 #live-performance .section-head h2 {
     text-align: center;
+}
+
+
+/* ----------------------------------VIDEOS------------------------------- */
+
+/* Videos section */
+.videos__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+
+  padding-inline: 1.5rem; /* 👈 adds left & right padding */
+}
+
+#videos h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
+@media (max-width: 600px) {
+  .videos__grid {
+    padding-inline: 1rem;
+  }
+}
+.video-card {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+}
+
+.video-card__frame {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 */
+  background: #000;
+}
+
+.video-card__frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-card__content {
+  padding: 1.2rem 1.4rem 1.5rem;
+}
+
+.video-card__content h3 {
+  margin: 0 0 0.4rem;
+}
+
+.video-card__content p {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  opacity: 0.85;
 }
 
 
@@ -550,6 +634,12 @@ h3 {
     width: 100%;
 }
 
+
+.button--small {
+    padding: 9px 12px;
+    border-radius: 14px;
+    font-size: 14px;
+}
 .feature {
     display: grid;
     grid-template-columns: 1.2fr .8fr;
@@ -594,11 +684,35 @@ h3 {
     margin-top: 2px;
 }
 
+/* -------------------- UPCOMING CONCERTS -------------------- */
+/* This section is built from shared layout styles:
+   - .section        → vertical spacing
+   - .container      → max width + horizontal centering
+   - .section-head   → heading layout
+   - .table-wrap     → card container + scrolling
+   - .table          → table layout + typography
+*/
+
+/* Center the section heading */
+#upcoming .section-head {
+    justify-content: center;
+}
+
+#upcoming h2 {
+    text-align: center;
+}
+
+/* Future-safe override hooks (currently no visual change) */
+/* #upcoming .table-wrap { }
+#upcoming .table { }
+#upcoming a { } */
+
+
 .table-wrap {
     overflow: auto;
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    background: rgba(18, 26, 42, .50);
+    background: rgba(53, 66, 90, 0.5);
 }
 
 .table {
@@ -776,3 +890,5 @@ h3 {
         padding: 12px 12px;
     }
 }
+
+
