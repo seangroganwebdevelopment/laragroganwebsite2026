@@ -21,6 +21,9 @@
     /* warm, classical gold */
     --accent2: #b9a36c;
 
+    --bordeaux: #6b1f2b;
+    --bordeaux2: #7a2433;
+
     --radius: 18px;
     --shadow: 0 12px 40px rgba(0, 0, 0, .35);
     --max: 1120px;
@@ -112,6 +115,7 @@ a:hover {
 
 .brand--center .brand__name {
     color: rgba(255, 255, 255, .92);
+    text-shadow: 0 10px 30px rgba(0, 0, 0, .35);
     font-style: italic;
     font-size: 22px;
 }
@@ -284,7 +288,7 @@ a:hover {
     margin: 0;
     position: relative;
     overflow: hidden;
-    background: #6b1f2b; /* bordeaux */
+    background: var(--bordeaux); /* bordeaux */
 }
 
 .hero-split__media::before {
@@ -292,7 +296,7 @@ a:hover {
     position: absolute;
     inset: 0 auto 0 0;
     width: 56px;         /* vertical bordeaux strip */
-    background: #6b1f2b;
+    background: var(--bordeaux);
     z-index: 1;
 }
 
@@ -305,20 +309,42 @@ a:hover {
 }
 
 .hero-split__panel {
-    background: #6b1f2b; /* bordeaux */
+    /* Layered bordeaux over a medieval tapestry pattern */
+    background-image:
+        linear-gradient(135deg, rgba(173, 86, 99, 0.88), rgba(107, 31, 43, .78)),
+        radial-gradient(700px 420px at 35% 30%, rgba(214, 195, 138, .14), transparent 60%),
+        url("assets/img/tapestry6.jpg");
+    background-size: cover, cover, 420px;
+    background-position: center, center, center;
+    background-repeat: no-repeat, no-repeat, repeat;
+
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 28px;
     text-align: center;
+    position: relative;
 }
+
+.hero-split__panel::before {
+    /* subtle “gold rule” at the join */
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(214, 195, 138, .55);
+    opacity: .9;
+}
+
 
 .hero-split__title {
     margin: 0 0 18px;
     font-family: var(--serif);
     font-weight: 600;
     font-style: italic;
-    letter-spacing: .2px;
+    letter-spacing: .4px;
     line-height: 1.15;
     color: rgba(255, 255, 255, .92);
     font-size: clamp(28px, 3.6vw, 44px);
@@ -474,7 +500,7 @@ a:hover {
 h1 {
     font-family: var(--serif);
     font-weight: 600;
-    letter-spacing: .2px;
+    letter-spacing: .4px;
     line-height: 1.12;
     margin: 0 0 14px;
     font-size: clamp(32px, 4.4vw, 52px);
@@ -564,8 +590,34 @@ h1 {
 h2 {
     font-family: var(--serif);
     font-weight: 600;
-    letter-spacing: .2px;
+    letter-spacing: .4px;
     font-size: 28px;
+}
+
+h2 { position: relative; }
+
+.section-head h2::after,
+#videos h2::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 86px;
+    margin-top: 10px;
+    background: rgba(214, 195, 138, .70);
+    border-radius: 999px;
+}
+
+.section-head:not(.section-head--center) h2::after {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.section-head--center h2::after,
+#live-performance .section-head h2::after,
+#upcoming .section-head h2::after,
+#videos h2::after {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h3 {
@@ -813,7 +865,7 @@ h3 {
     overflow: auto;
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    background: rgba(53, 66, 90, 0.5);
+    background: linear-gradient(180deg, rgba(255, 255, 255, .72), rgba(255, 255, 255, .62));
 }
 
 .table {
@@ -907,7 +959,7 @@ h3 {
 .site-footer {
     border-top: 1px solid var(--line);
     padding: 18px 0;
-    background: rgba(10, 12, 18, .70);
+    background: rgba(16, 10, 12, .78);
 }
 
 .footer-inner {

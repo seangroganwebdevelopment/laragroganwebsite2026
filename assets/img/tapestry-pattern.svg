@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360">
+  <defs>
+    <pattern id="tap" width="180.0" height="180.0" patternUnits="userSpaceOnUse">
+      <rect width="180.0" height="180.0" fill="#f6f1e8" opacity="0.14"/>
+      <path d="M 90.0 10 L 170.0 90.0 L 90.0 170.0 L 10 90.0 Z"
+            fill="none" stroke="#d6c38a" stroke-width="2" opacity="0.35"/>
+      <path d="M 90.0 26 L 154.0 90.0 L 90.0 154.0 L 26 90.0 Z"
+            fill="none" stroke="#b9a36c" stroke-width="1.5" opacity="0.25"/>
+      <g opacity="0.32">
+        <circle cx="90.0" cy="56.0" r="12" fill="#6b1f2b" opacity="0.55"/>
+        <circle cx="56.0" cy="90.0" r="12" fill="#6b1f2b" opacity="0.55"/>
+        <circle cx="90.0" cy="124.0" r="12" fill="#6b1f2b" opacity="0.55"/>
+        <circle cx="124.0" cy="90.0" r="12" fill="#6b1f2b" opacity="0.55"/>
+        <circle cx="90.0" cy="90.0" r="10" fill="#0f3b2d" opacity="0.45"/>
+        <circle cx="90.0" cy="90.0" r="3.5" fill="#d6c38a" opacity="0.65"/>
+      </g>
+      <path d="M 45.0 90.0 C 67.0 62.0, 109.0 62.0, 119.0 90.0
+               C 129.0 118.0, 87.0 124.0, 81.0 102.0"
+            fill="none" stroke="#0f3b2d" stroke-width="2" opacity="0.28" stroke-linecap="round"/>
+      <g opacity="0.22" fill="#d6c38a">
+        <path d="M 36.0 36.0 l 4 10 l 10 4 l -10 4 l -4 10 l -4 -10 l -10 -4 l 10 -4 z"/>
+        <path d="M 150.0 36.0 l 3 8 l 8 3 l -8 3 l -3 8 l -3 -8 l -8 -3 l 8 -3 z"/>
+      </g>
+    </pattern>
+  </defs>
+
+  <rect width="360" height="360" fill="url(#tap)"/>
+  <g opacity="0.7" transform="translate(180.0, 180.0) scale(-1, -1) translate(-180.0, -180.0)">
+    <rect width="360" height="360" fill="url(#tap)"/>
+  </g>
+</svg>
