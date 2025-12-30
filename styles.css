@@ -251,7 +251,12 @@ a:hover {
 }
 
 
+
+
 /* --------------------HERO------------------------ */
+
+
+
 
 .hero {
     padding: 54px 0 24px;
@@ -341,7 +346,9 @@ a:hover {
 
 
 
-/* LIVE PERFORMANCE --------------------- */
+
+/* ------------------- LIVE PERFORMANCE --------------------- */
+
 
 
 .live-performance {
@@ -367,7 +374,11 @@ a:hover {
 }
 
 
+
+
 /* ----------------------------------VIDEOS------------------------------- */
+
+
 
 /* Videos section */
 .videos__grid {
@@ -683,6 +694,96 @@ h3 {
     font-size: 13px;
     margin-top: 2px;
 }
+
+
+
+/* -------------------- DEBUT ALBUM -------------------- */
+
+.section-head--center {
+    justify-content: center;
+}
+
+.section-head--center h2 {
+    text-align: center;
+}
+
+.album-quote {
+    text-align: center;
+    margin: 8px auto 18px;
+    max-width: 78ch;
+}
+
+.album-quote__text {
+    margin: 0;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 26px;
+    color: rgba(43, 43, 43, .78);
+}
+
+.album-quote__by {
+    margin: 8px 0 0;
+    font-size: 19px;
+    color: var(--muted);
+}
+
+.album-frame {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, .78);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .10);
+    padding: 18px;
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 18px;
+    align-items: start;
+}
+
+.album-cover {
+    margin: 0;
+    border-radius: calc(var(--radius) - 6px);
+    overflow: hidden;
+    border: 1px solid rgba(43, 43, 43, .14);
+    background: rgba(255, 255, 255, .6);
+}
+
+.album-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.album-body p {
+    margin: 0 0 12px;
+}
+
+.album-body p:last-child {
+    margin-bottom: 0;
+}
+
+.album-listen a {
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .album-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .album-frame {
+        padding: 14px;
+    }
+
+    .album-cover img {
+        aspect-ratio: 16 / 10;
+    }
+}
+
 
 /* -------------------- UPCOMING CONCERTS -------------------- */
 /* This section is built from shared layout styles:
