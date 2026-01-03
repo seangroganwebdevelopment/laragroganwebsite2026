@@ -954,6 +954,133 @@ h3 {
     padding: 52px 0 18px;
 }
 
+/* -------------------- ABOUT PAGE FIX -------------------- */
+
+.page-about .page-hero h1 {
+    color: var(--text);
+}
+
+.page-about .page-hero .lead {
+    color: var(--muted);
+}
+
+.page-about .prose p {
+    color: var(--text);
+}
+
+/* -------------------- ABOUT HERO (IMAGE BAND) -------------------- */
+
+.about-hero {
+  margin: 0;
+}
+
+/* Full-width bordeaux strip */
+.about-hero__band {
+  background: var(--bordeaux);
+  padding: 26px 0;
+}
+
+/* Centered media block (does NOT fill full width) */
+.about-hero__media {
+  width: min(920px, calc(100% - 40px));
+  margin: 0 auto;
+  border-radius: 0; /* screenshot looks square; change to var(--radius) if you want rounded */
+  overflow: hidden;
+}
+
+/* Image sizing */
+.about-hero__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Optional: tighten spacing above the text hero on About page */
+.page-hero--about-text {
+  padding-top: 32px;
+}
+
+
+.about-hero__media img {
+  height: 360px;
+  width: 70%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;   /* ← THIS centers it */
+}
+
+/* -------------------- ABOUT INDEX (top list) -------------------- */
+
+.about-index {
+  max-width: 78ch;
+  margin: 18px auto 34px;   /* space above & below */
+  padding-left: 18px;       /* keeps bullets aligned nicely */
+}
+
+.about-index li {
+  margin: 8px 0;
+}
+
+.about-index a {
+  color: var(--text);
+  text-decoration-color: rgba(214, 195, 138, .55); /* your gold accent */
+  text-underline-offset: 4px;
+}
+
+.about-index a:hover {
+  text-decoration-color: rgba(214, 195, 138, .95);
+}
+
+
+/* -------------------- FUN FACTS AND MILESTONES (Word-format blocks) -------------------- */
+
+.about-funfacts {
+  padding: 10px 0 36px;
+}
+
+.funfacts-wrap {
+  max-width: 78ch; /* same readable line-length as your prose */
+}
+
+.funfacts-title {
+  margin: 0 0 18px;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: .3px;
+  color: var(--text);
+}
+
+.funfacts-list {
+  margin: 0;
+  padding: 0;
+}
+
+.funfacts-list dt {
+  margin: 0 0 6px;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text);
+}
+
+.funfacts-list dd {
+  margin: 0 0 18px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+
+
+@media (max-width: 700px) {
+  .about-hero__media img {
+    height: 240px;
+  }
+}
+
+/* ------- */
+
 .prose {
     max-width: 78ch;
 }

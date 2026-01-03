@@ -1,155 +1,265 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="About Lara Grogan — songwriter and composer. Debut album The Sculptor (2024). Tales & Legends in Song." />
+  <meta name="description"
+    content="About Lara Grogan — songwriter and composer. Debut album The Sculptor (2024). Tales & Legends in Song." />
   <title>About — Lara Grogan</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
   <script defer src="assets/js/main.js"></script>
 </head>
 
-<body>
+<body class="page-about">
+
   <a class="skip-link" href="#main">Skip to content</a>
+
+  <!----------------- HEADER ---------------------- -->
 
   <header class="site-header" data-header>
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Lara Grogan home">
-        <span class="brand__name">Lara Grogan</span>
-        <span class="brand__tag">Songwriter · Composer</span>
-      </a>
+      <div class="header-left">
+        <button class="nav-toggle" data-nav-toggle aria-controls="site-nav" aria-expanded="false">
+          <span class="nav-toggle__label">Menu</span>
+          <span class="nav-toggle__icon" aria-hidden="true"></span>
+        </button>
 
-      <button class="nav-toggle" data-nav-toggle aria-controls="site-nav" aria-expanded="false">
-        <span class="nav-toggle__label">Menu</span>
-        <span class="nav-toggle__icon" aria-hidden="true"></span>
-      </button>
+        <nav id="site-nav" class="site-nav" data-nav>
+          <a class="nav-link is-active" href="index.html">Home</a>
+          <a class="nav-link" href="#live-performance">Concerts</a>
+          <a class="nav-link" href="about.html">About</a>
+          <!-- "Blog" appears in the Home.docx navigation; this points to the Press & Radio section for now -->
+          <a class="nav-link" href="#press">Blog</a>
+        </nav>
+      </div>
 
-      <nav id="site-nav" class="site-nav" data-nav>
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link is-active" href="about.html">About</a>
-        <a class="nav-link" href="tales-legends.html">Tales &amp; Legends</a>
-        <a class="nav-link nav-link--button" href="index.html#contact">Booking</a>
-      </nav>
+      <div class="header-center">
+        <a class="brand brand--center" href="index.html" aria-label="Lara Grogan home">
+          <span class="brand__name">Lara Grogan</span>
+        </a>
+      </div>
+
+      <div class="header-right" aria-label="Social links">
+        <a class="social-link" href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M13.5 22v-8h2.7l.5-3H13.5V9.1c0-.9.3-1.5 1.6-1.5H16.8V5.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.4V11H7.5v3h2.6v8h3.4z" />
+          </svg>
+        </a>
+        <a class="social-link" href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2zm0 2A1.8 1.8 0 1 0 13.8 12 1.8 1.8 0 0 0 12 10.2zM17.7 6.1a.9.9 0 1 1-.9.9.9.9 0 0 1 .9-.9z" />
+          </svg>
+        </a>
+        <a class="social-link" href="#" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.8 4.6 12 4.6 12 4.6s-5.8 0-7.5.5A3 3 0 0 0 2.4 7.2 31.6 31.6 0 0 0 2 12a31.6 31.6 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.7.5 7.5.5 7.5.5s5.8 0 7.5-.5a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 22 12a31.6 31.6 0 0 0-.4-4.8zM10 15.5v-7l6 3.5-6 3.5z" />
+          </svg>
+        </a>
+        <a class="social-link" href="#" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M16.5 2h3a6.8 6.8 0 0 0 2.5 4.2V9a9.8 9.8 0 0 1-5.5-1.8v7.8a6.7 6.7 0 1 1-6.7-6.7c.4 0 .8 0 1.2.1v3.1a3.6 3.6 0 1 0 2.4 3.4V2z" />
+          </svg>
+        </a>
+      </div>
     </div>
   </header>
 
   <main id="main">
-    <section class="page-hero">
-      <div class="container">
-        <p class="eyebrow">About</p>
-        <h1>Songwriter, composer, and storyteller.</h1>
-        <p class="lead">
-          Lara Grogan grew up with a deep love for songwriting and narrative music — shaped early by artists such as Joni Mitchell,
-          The Beatles, Simon &amp; Garfunkel, and Carole King.
-        </p>
+
+
+
+    <section class="about-hero" aria-label="About hero image">
+      <div class="about-hero__band">
+        <figure class="about-hero__media">
+          <!-- Replace this src with your real image path -->
+          <img src="assets/img/ScreamingFieldsLara.jpg" alt="Lara Grogan performing live" loading="eager" />
+        </figure>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container prose">
-        <h2>Biography</h2>
-        <p>
-          Over the years, Lara has drawn inspiration from many musicians while developing her own distinctive sound — blending pop, folk,
-          rock, and classical influences, guided by curiosity and creativity.
-        </p>
 
-        <p>
-          In 2024, she released her debut album <em>The Sculptor</em>, a collection of songs written between the ages of 14 and 18.
-          For the album, she also composed and arranged the string quartet parts. The title track, <em>The Sculptor</em>, was a
-          Semi-Finalist in the Singer-Songwriter category of the UK Songwriting Contest 2023.
-        </p>
 
-        <p>
-          In 2022, she composed and performed <em>City and Its People</em>, a piece created for the opening of Esch 2022, European Capital of Culture.
-        </p>
 
-        <h2>Current work</h2>
-        <p>
-          Lara is currently working on a live music project close to her heart: <em>Tales &amp; Legends in Song</em>.
-          Inspired by little-known legends and tales of Luxembourg’s medieval past, the project brings these stories to life in a contemporary way,
-          exploring themes such as communication, self-confidence, courage in the face of change, and the complexities of human nature.
-        </p>
+    <!-- -------------------- ABOUT INDEX -------------------- -->
 
-        <h2>Education &amp; languages</h2>
-        <p>
-          Born in Luxembourg in 2004, Lara Grogan is fluent in five languages, with English as her mother tongue.
-          She is currently studying at the Hochschule für Musik und Tanz in Cologne, Germany.
-        </p>
+    <ul class="about-index">
+      <li><a href="#fun-facts">6 Fun Facts about Lara</a></li>
+      <li><a href="#milestones">6 Stepping Milestones</a></li>
+      <li><a href="#press">Press &amp; Radio (Articles &amp; Interviews)</a></li>
+    </ul>
 
-        <div class="callout">
-          <h3>For presenters &amp; cultural partners</h3>
-          <p>
-            If you are programming a festival, theatre, venue, or cultural series: the project page includes the two concert formats,
-            instrumentation, language, and duration.
-          </p>
-          <a class="button" href="tales-legends.html">View Tales &amp; Legends formats</a>
-        </div>
+    <!-- -------------------- FUN FACTS -------------------- -->
+
+    <section id="fun-facts" class="about-funfacts">
+      <div class="container funfacts-wrap">
+
+        <h2 class="funfacts-title">Fun Facts</h2>
+
+        <dl class="funfacts-list">
+          <dt>Joni Mitchell, The Beatles, Simon & Garfunkel, Carole King, Beethoven, Tchaikovsky</dt>
+          <dd>
+            These artists and composers shaped Lara’s musical world from an early age.
+          </dd>
+
+          <dt>Storytelling &amp; Authenticity</dt>
+          <dd>
+            Every song Lara writes feels like building a small world: imaginative, thoughtful, and emotional.
+          </dd>
+
+          <dt>Pop, Folk, Rock, Classical</dt>
+          <dd>
+            Blending genres and instruments helps Lara create a sound of her own. She performs folk-rock with a full
+            band
+            and intimate singer-songwriter sets as a duo with a cellist.
+          </dd>
+
+          <dt>Plurilingual</dt>
+          <dd>
+            Lara speaks five languages, with English as her mother tongue. She grew up in multilingual Luxembourg,
+            attending school in Luxembourgish, German, and French. As a teenager, she also studied Latin and earned her
+            “Kleines Latinum”.
+          </dd>
+
+          <dt>Multicultural</dt>
+          <dd>
+            Lara was born in Luxembourg in 2004 to an English-speaking father from South Africa and a Russian-speaking
+            mother from Moldova. She grew up surrounded by languages, cultures, and music. Both her parents are
+            translators and music lovers.
+          </dd>
+
+          <dt>A True Lover of Books</dt>
+          <dd>
+            Lara loves reading, and stories often inspire her songwriting. At 14, she wrote What Was Mine after reading
+            the Greek myth Echo and Narcissus, and at 15, The Sculptor was born after reading Vom Ende der Einsamkeit by
+            Benedict Wells.
+          </dd>
+        </dl>
+
       </div>
     </section>
+
+    <!-- -------------------- 6 STEPPING MILESTONES -------------------- -->
+
+    <section id="milestones" class="about-funfacts">
+      <div class="container funfacts-wrap">
+
+        <h2 class="funfacts-title">6 Stepping Milestones</h2>
+
+        <dl class="funfacts-list">
+          <dt>2024</dt>
+          <dd>
+            Released debut album The Sculptor, featuring 8 songs written between ages 14 and 18. Composed and arranged
+            string quartet parts.
+          </dd>
+
+          <dt>2023</dt>
+          <dd>
+            Title track The Sculptor became a Semi-Finalist in the Singer-Songwriter category of the UK Songwriting
+            Contest.
+          </dd>
+
+          <dt>2022</dt>
+          <dd>
+            Composed and performed City and Its People (age 18) for the opening of Esch 2022, European Capital of
+            Culture.
+          </dd>
+
+          <dt>2017</dt>
+          <dd>
+            Youngest participant (age 13) in the first Screaming Fields Song Contest organized by Rocklab / Luxembourg.
+            Song ranked among the top five entries.
+          </dd>
+
+          <dt>2015</dt>
+          <dd>
+            First stage performance at school (age 11), playing an electric guitar and singing a Beatles song in front
+            of classmates and parents.
+          </dd>
+
+          <dt>2013</dt>
+          <dd>
+            Started piano lessons at age 9 and picked up guitar two years later at age 11.
+          </dd>
+        </dl>
+
+      </div>
+    </section>
+
+   
   </main>
 
 
-  <!-------------------------- PRESS ------------------------>
+  <!---------------------------------------------------- PRESS ----------------------------------------------------->
 
 
-    
-    <section id="press" class="section section--alt">
-      <div class="container">
-        <div class="section-head">
-          <h2>Press &amp; Radio on The Sculptor</h2>
-        </div>
 
-        <div class="cards cards--press">
-          <article class="card">
-            <h3>WORT.LU (25.04.2024) — German</h3>
-            <p><a
-                href="https://www.wort.lu/kultur/lampenfieber-und-leidenschaft-lara-grogan-strebt-karriere-als-singer-songwriterin-an/12235912.html"
-                target="_blank" rel="noopener">Read here</a></p>
-          </article>
-
-          <article class="card">
-            <h3>WORT.LU (27.04.2025) — German</h3>
-            <p><a
-                href="https://www.wort.lu/kultur/lara-grogan-mit-elf-ihr-erstes-lied-mit-20-ihr-erstes-album/12306081.html"
-                target="_blank" rel="noopener">Read here</a></p>
-          </article>
-
-          <article class="card">
-            <h3>chronicle.lu (19.06.2024) — English</h3>
-            <p><a
-                href="https://chronicle.lu/category/music/50306-young-luxembourg-musician-lara-grogan-launches-debut-album-the-sculptor"
-                target="_blank" rel="noopener">Read here</a></p>
-          </article>
-
-          <article class="card">
-            <h3>femmesmagazine.lu (16.07.2024) — French</h3>
-            <p><a href="https://www.femmesmagazine.lu/la-musique-comme-horizon/" target="_blank" rel="noopener">Read
-                here</a></p>
-          </article>
-
-          <article class="card">
-            <h3>Interviews on Radio 100,7</h3>
-            <ul class="muted">
-              <li><a href="https://m.100komma7.lu/episoden/Den-eischten-Album-vun-der-Lara-Grogan?pd=radio"
-                  target="_blank" rel="noopener">27.04.2024 — Den éischten Album vun der Lara Grogan</a></li>
-              <li><a href="https://m.100komma7.lu/episoden/D-Lara-Grogan-brengt-hiren-eischten-Album-eraus?pd=radio"
-                  target="_blank" rel="noopener">26.04.2024 — D’Lara Grogan bréngt hiren éischten Album eraus</a></li>
-              <li><a href="https://www.100komma7.lu/episoden/Kultur-um-5-623688429?pd=radio" target="_blank"
-                  rel="noopener">27.09.2023 — Kultur em 5 (release of “The Sculptor”)</a></li>
-              <li><a href="https://api.100komma7.lu/program/episode/450734/20230718082200-20230718082700?pd=radio"
-                  target="_blank" rel="noopener">18.07.2023 — Wann aus Mythologie Musek gëtt (release of “What was
-                  mine”)</a></li>
-            </ul>
-          </article>
-        </div>
+  <section id="press" class="section section--alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Press &amp; Radio on The Sculptor</h2>
       </div>
-    </section>
+
+      <div class="cards cards--press">
+        <article class="card">
+          <h3>WORT.LU (25.04.2024) — German</h3>
+          <p><a
+              href="https://www.wort.lu/kultur/lampenfieber-und-leidenschaft-lara-grogan-strebt-karriere-als-singer-songwriterin-an/12235912.html"
+              target="_blank" rel="noopener">Read here</a></p>
+        </article>
+
+        <article class="card">
+          <h3>WORT.LU (27.04.2025) — German</h3>
+          <p><a
+              href="https://www.wort.lu/kultur/lara-grogan-mit-elf-ihr-erstes-lied-mit-20-ihr-erstes-album/12306081.html"
+              target="_blank" rel="noopener">Read here</a></p>
+        </article>
+
+        <article class="card">
+          <h3>chronicle.lu (19.06.2024) — English</h3>
+          <p><a
+              href="https://chronicle.lu/category/music/50306-young-luxembourg-musician-lara-grogan-launches-debut-album-the-sculptor"
+              target="_blank" rel="noopener">Read here</a></p>
+        </article>
+
+        <article class="card">
+          <h3>femmesmagazine.lu (16.07.2024) — French</h3>
+          <p><a href="https://www.femmesmagazine.lu/la-musique-comme-horizon/" target="_blank" rel="noopener">Read
+              here</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Interviews on Radio 100,7</h3>
+          <ul class="muted">
+            <li><a href="https://m.100komma7.lu/episoden/Den-eischten-Album-vun-der-Lara-Grogan?pd=radio"
+                target="_blank" rel="noopener">27.04.2024 — Den éischten Album vun der Lara Grogan</a></li>
+            <li><a href="https://m.100komma7.lu/episoden/D-Lara-Grogan-brengt-hiren-eischten-Album-eraus?pd=radio"
+                target="_blank" rel="noopener">26.04.2024 — D’Lara Grogan bréngt hiren éischten Album eraus</a></li>
+            <li><a href="https://www.100komma7.lu/episoden/Kultur-um-5-623688429?pd=radio" target="_blank"
+                rel="noopener">27.09.2023 — Kultur em 5 (release of “The Sculptor”)</a></li>
+            <li><a href="https://api.100komma7.lu/program/episode/450734/20230718082200-20230718082700?pd=radio"
+                target="_blank" rel="noopener">18.07.2023 — Wann aus Mythologie Musek gëtt (release of “What was
+                mine”)</a></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
   </main>
+
+<!-- -----------------------------------FOOTER------------------------------------------ -->
+
 
   <footer class="site-footer">
     <div class="container footer-inner">
@@ -160,4 +270,5 @@
     </div>
   </footer>
 </body>
+
 </html>
